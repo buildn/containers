@@ -20,6 +20,6 @@ COPY kafka/properties/control-center/* /etc/confluent-control-center/
 
 ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk/
 
-EXPOSE 9021 9092 9094 9096 9098
+EXPOSE 2181 9021 9092 9094 9096 9098
 
 CMD ["/bin/bash", "/root/start.sh"]
