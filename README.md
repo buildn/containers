@@ -39,6 +39,10 @@ cd ~/Work/kafka_2.12-2.3.0/bin/
 sh kafka-topics.sh --create --topic TestTopic2 --zookeeper localhost:22181 --partitions 4 --replication-factor 2
 
 sh kafka-console-producer.sh --broker-list localhost:29092,localhost:29094,localhost:29096,localhost:29098 --topic TestTopic2
-sh kafka-console-consumer.sh --bootstrap-server localhost:29092,localhost:29094,localhost:29096,localhost:29098 --topic TestTopic2 --from-begining
+sh kafka-console-consumer.sh --bootstrap-server localhost:29092,localhost:29094,localhost:29096,localhost:29098 --topic TestTopic2 --from-beginning
 
+```
+# Login to kafka container
+```shell script
+docker exec -it confluent-kafka /bin/bash
 ```
