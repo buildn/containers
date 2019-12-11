@@ -15,9 +15,10 @@ RUN rpm --import https://packages.confluent.io/rpm/5.3/archive.key && \
     yum -y install confluent-platform-2.12
 
 COPY kafka/properties/brokers/* /etc/kafka/
+COPY kafka/properties/connector/* /etc/kafka/
 COPY kafka/properties/schema-registry/* /etc/schema-registry/
 COPY kafka/properties/control-center/* /etc/confluent-control-center/
-
+COPY kafka/data/connector-file-source.txt /etc/kafka/
 ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk/
 
 EXPOSE 2181 9021 9092 9094 9096 9098

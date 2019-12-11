@@ -46,3 +46,9 @@ sh kafka-console-consumer.sh --bootstrap-server localhost:29092,localhost:29094,
 ```shell script
 docker exec -it confluent-kafka /bin/bash
 ```
+
+# Start file connector
+```shell script
+cd /bin
+sh connect-standalone /etc/kafka/connect-standalone.properties /etc/kafka/connect-file-source.properties /etc/kafka/connect-file-sink.properties 
+```
