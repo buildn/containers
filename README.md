@@ -3,12 +3,12 @@
 ### To build image and run container
 ```shell script
 
-docker build -t <image_tag> .
+docker build -t multi-broker .
 && docker run
 -p 29021:9021 -p 29092:29092 -p 29094:29094 -p 29096:29096 -p 29098:29098 -p 22181:2181
 --name confluent-kafka
 -h confluent-kafka
-<image_tag> 
+multi-broker 
 
 ```
 
