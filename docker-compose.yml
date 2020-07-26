@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    # this is our confluent kafka cluster
+    kafka:
+        image: nathdebasish/kafka
+        ports: 
+            - 22181:2181
+            - 29092:29092
+            - 29094:29094
+            - 29096:29096
+            - 29098:29098
+            - 29021:9021
+        hostname: confluent-kafka
